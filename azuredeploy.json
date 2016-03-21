@@ -74,28 +74,28 @@
       "metadata": {
         "description": "The size of the AD VM Created"
       },
-      "defaultValue": "Standard_DS2"
+      "defaultValue": "Standard_D5"
     },
     "sqlVMSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the SQL VM Created"
       },
-      "defaultValue": "Standard_DS2"
+      "defaultValue": "Standard_D5"
     },
     "spVMSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the VM Created"
       },
-      "defaultValue": "Standard_DS3"
+      "defaultValue": "Standard_D5"
     },
     "domainName": {
       "type": "string",
       "metadata": {
         "description": "The FQDN of the AD Domain created "
       },
-      "defaultValue": "contoso.local"
+      "defaultValue": "razar.local"
     },
     "sqlServerServiceAccountUserName": {
       "type": "string",
@@ -161,7 +161,7 @@
         "artifactsBaseUrl": "",
         "description": "URL to acquire other templates"
       },
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sharepoint-three-vm"
+      "defaultValue": "https://raw.githubusercontent.com/razar-msft/SharePoint-Non-HA-FARM/master"
     },
     "spPublicIPNewOrExisting": {
       "type": "string",
@@ -196,12 +196,12 @@
     "storageAccountType": {
       "type": "string",
       "allowedValues": [
-        "Premium_LRS"
+        "Standard_LRS"
       ],
       "metadata": {
         "description": "The type of the Storage Account created"
       },
-      "defaultValue": "Premium_LRS"
+      "defaultValue": "Standard_LRS"
     }
   },
   "variables": {
@@ -356,7 +356,7 @@
     {
       "name": "CreatingAvailabilitySets",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2015-01-01",
+      "apiVersion": "2014-01-01",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
